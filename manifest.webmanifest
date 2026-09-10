@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "Fietstechniek Race",
+  "short_name": "Fiets Race",
+  "description": "Interactieve fietstechniekrace voor leerlingen in het Praktijkonderwijs.",
+  "lang": "nl-NL",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0d2433",
+  "theme_color": "#0d2433",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
