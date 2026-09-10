@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="nl">
 <head>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d2433">
@@ -1621,5 +1626,14 @@ state.players = [{name:"",age:12},{name:"",age:12}];
 renderPlayerInputs();
 
   </script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js")
+        .then(() => console.log("Offlinefunctie is actief."))
+        .catch(error => console.error("Offlinefunctie kon niet starten:", error));
+    });
+  }
+</script>
 </body>
 </html>
